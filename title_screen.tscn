@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkut4jekplvqh"]
+
+[ext_resource type="Script" uid="uid://ba7h5otrvy8mx" path="res://play_game.gd" id="1_v6p8y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1s85s"]
+font_size = 29
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -113.0
+offset_right = 134.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "The Vineyard"
+label_settings = SubResource("LabelSettings_1s85s")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.5
+offset_top = -66.0
+offset_right = 71.5
+offset_bottom = -17.804993
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_v6p8y")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
