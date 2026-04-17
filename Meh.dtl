@@ -1,0 +1,7 @@
+label Meh
+Customer (Sad): Yeah... whatever.
+[signal arg="customer_served"]
+[signal arg="meh_serve"]
+leave Customer [animation="Slide To Right" length="1.5" wait="true"]
+[wait time="2.0"]
+jump Orders/Customer Enters

@@ -1,0 +1,56 @@
+label Customer Enters
+join Customer center [animation="Slide From Left" length="1.5" wait="true"]
+set {Sweet} = range(0,100).pick_random()
+set {Sour} = range(0, (100 - {Sweet})).pick_random()
+set {Bitter} = 100 - ({Sweet} + {Sour})
+if {Sweet} < 25:
+	set {SweetConditional} = "a little"
+elif {Sweet} >= 25 && {Sweet} < 50:
+	set {SweetConditional} = "a bit"
+elif {Sweet} >= 50 && {Sweet} < 75:
+	set {SweetConditional} = "mostly"
+elif {Sweet} >= 75:
+	set {SweetConditional} = "insanely"
+elif {Sweet} == 100:
+	set {SweetConditional} = "completely"
+else:
+	set {SweetConditional} = "not at all"
+if {Bitter} < 25:
+	set {BitterConditional} = "a little"
+elif {Bitter} >= 25 && {Bitter} < 50:
+	set {BitterConditional} = "a bit"
+elif {Bitter} >= 50 && {Bitter} < 75:
+	set {BitterConditional} = "mostly"
+elif {Bitter} >= 75:
+	set {BitterConditional} = "insanely"
+elif {Bitter} == 100:
+	set {BitterConditional} = "completely"
+else:
+	set {BitterConditional} = "not at all"
+if {Sour} < 25:
+	set {SourConditional} = "a little"
+elif {Sour} >= 25 && {Sour} < 50:
+	set {SourConditional} = "a bit"
+elif {Sour} >= 50 && {Sour} < 75:
+	set {SourConditional} = "mostly"
+elif {Sour} >= 75:
+	set {SourConditional} = "insanely"
+elif {Sour} == 100:
+	set {SourConditional} = "completely"
+else:
+	set {SourConditional} = "not at all"
+if {Sweet} > {Sour} && {Sweet} > {Bitter}:
+	set {Flavor} = "Sweet"
+elif {Sour} > {Sweet} && {Sour} > {Bitter}:
+	set {Flavor} = "Sour"
+elif {Bitter} > {Sour} && {Bitter} > {Sweet}:
+	set {Flavor} = "Bitter"
+else:
+	set {Flavor} = "Null"
+set {Magic} = ["Mana", "Health", "Stamina"].pick_random()
+Customer (Happy): Hello!
+Customer (Neutral): Can I get a {Magic} potion that's {SweetConditional} sweet, {SourConditional} sour, and {BitterConditional} bitter?
+[signal arg="potion_ordered"]
+[wait time="240.0"]
+Customer (Mad): Don't take so long next time!
+jump Customer Enters

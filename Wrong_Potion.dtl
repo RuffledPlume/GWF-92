@@ -1,0 +1,6 @@
+label Wrong_Potion
+Customer (Mad): Hey! This is the wrong potion!
+[signal arg="customer_served"]
+leave Customer [animation="Slide To Right" length="1.5" wait="true"]
+[wait time="2.0"]
+jump Orders/Customer Enters

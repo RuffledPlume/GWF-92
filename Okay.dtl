@@ -1,0 +1,7 @@
+label Okay
+Customer (Neutral): That'll do.
+[signal arg="customer_served"]
+[signal arg="okay_serve"]
+leave Customer [animation="Slide To Right" length="1.5" wait="true"]
+[wait time="2.0"]
+jump Orders/Customer Enters

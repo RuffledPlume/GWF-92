@@ -1,0 +1,115 @@
+[gd_scene load_steps=19 format=3 uid="uid://hwh5v6244pya"]
+
+[ext_resource type="Texture2D" uid="uid://ck2eym73dlojp" path="res://Cauldron.png" id="1_0t22i"]
+[ext_resource type="Texture2D" uid="uid://b7tcykhh0e01b" path="res://Potion.png" id="2_q3ljf"]
+[ext_resource type="Script" uid="uid://31scwjojtiti" path="res://cauldron_fill.gd" id="3_q3ljf"]
+[ext_resource type="Texture2D" uid="uid://d3bnugxh61cie" path="res://PurpleGrape.png" id="4_4kmeg"]
+[ext_resource type="Texture2D" uid="uid://dvnbispmu0kx4" path="res://GreenGrape.png" id="5_r337x"]
+[ext_resource type="Texture2D" uid="uid://bmexfuxpqlg1c" path="res://WhiteGrape.png" id="6_f2b5b"]
+[ext_resource type="Texture2D" uid="uid://bhfqpcf44nhwf" path="res://HealthFruit.png" id="7_r337x"]
+[ext_resource type="Texture2D" uid="uid://bupgbc32c8xnq" path="res://HealthFruit_Pressed.png" id="8_f4dxp"]
+[ext_resource type="Texture2D" uid="uid://ym0nmg3tpgk5" path="res://ManaFruit.png" id="8_l3vo4"]
+[ext_resource type="Script" uid="uid://cmj7w70fkm27l" path="res://health_fruit.gd" id="8_seiem"]
+[ext_resource type="Texture2D" uid="uid://l8h73esillco" path="res://StaminaFruit.png" id="9_0vpna"]
+[ext_resource type="Texture2D" uid="uid://bqkft5phjnub2" path="res://DisabledFruit.png" id="9_8webr"]
+[ext_resource type="Texture2D" uid="uid://iit76omk12ev" path="res://FinishedCauldron.png" id="10_0vpna"]
+[ext_resource type="Script" uid="uid://ctt0gv7w7xe43" path="res://mana_fruit.gd" id="10_idci6"]
+[ext_resource type="Script" uid="uid://dfwmlr1gyhpjf" path="res://full_cauldron.gd" id="11_x7ncy"]
+[ext_resource type="Script" uid="uid://cvb3g1rnrmi8i" path="res://stamina_fruit.gd" id="12_cia60"]
+[ext_resource type="Texture2D" uid="uid://ccyjn2gof1kur" path="res://ManaFruit_Pressed.png" id="12_dl0jh"]
+[ext_resource type="Texture2D" uid="uid://dkgtxlct2x6iq" path="res://StamFruit_Pressed.png" id="15_l7vjp"]
+
+[node name="Cauldron" type="Node2D"]
+
+[node name="CauldronFill" type="TextureProgressBar" parent="."]
+offset_left = 730.0
+offset_top = 256.0
+offset_right = 1076.0
+offset_bottom = 602.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("1_0t22i")
+texture_progress = ExtResource("2_q3ljf")
+script = ExtResource("3_q3ljf")
+
+[node name="PurpleGrape" type="TextureButton" parent="."]
+offset_left = 731.0
+offset_top = 142.99998
+offset_right = 1811.0
+offset_bottom = 1223.0
+scale = Vector2(0.06919291, 0.06919291)
+texture_normal = ExtResource("4_4kmeg")
+
+[node name="GreenGrape" type="TextureButton" parent="."]
+offset_left = 863.0
+offset_top = 142.0
+offset_right = 1943.0
+offset_bottom = 1222.0
+scale = Vector2(0.06919291, 0.06919291)
+texture_normal = ExtResource("5_r337x")
+
+[node name="WhiteGrape" type="TextureButton" parent="."]
+offset_left = 990.0
+offset_top = 145.99998
+offset_right = 2070.0
+offset_bottom = 1226.0
+scale = Vector2(0.06919291, 0.06919291)
+texture_normal = ExtResource("6_f2b5b")
+
+[node name="HealthFruit" type="TextureButton" parent="."]
+offset_left = 734.0
+offset_top = 41.0
+offset_right = 1814.0
+offset_bottom = 1121.0
+scale = Vector2(0.06797023, 0.06797023)
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("7_r337x")
+texture_pressed = ExtResource("8_f4dxp")
+texture_disabled = ExtResource("9_8webr")
+script = ExtResource("8_seiem")
+
+[node name="ManaFruit" type="TextureButton" parent="."]
+offset_left = 863.0
+offset_top = 45.0
+offset_right = 1943.0
+offset_bottom = 1125.0
+scale = Vector2(0.06797023, 0.06797023)
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("8_l3vo4")
+texture_pressed = ExtResource("12_dl0jh")
+texture_disabled = ExtResource("9_8webr")
+script = ExtResource("10_idci6")
+
+[node name="StaminaFruit" type="TextureButton" parent="."]
+offset_left = 991.0
+offset_top = 45.0
+offset_right = 2071.0
+offset_bottom = 1125.0
+scale = Vector2(0.06797023, 0.06797023)
+toggle_mode = true
+texture_normal = ExtResource("9_0vpna")
+texture_pressed = ExtResource("15_l7vjp")
+texture_disabled = ExtResource("9_8webr")
+script = ExtResource("12_cia60")
+
+[node name="FullCauldron" type="TextureButton" parent="."]
+offset_left = 786.0
+offset_top = 308.99997
+offset_right = 1866.0
+offset_bottom = 1389.0
+scale = Vector2(0.21802008, 0.21802008)
+texture_normal = ExtResource("10_0vpna")
+script = ExtResource("11_x7ncy")
+
+[connection signal="pressed" from="PurpleGrape" to="CauldronFill" method="_on_purple_grape_pressed"]
+[connection signal="pressed" from="GreenGrape" to="CauldronFill" method="_on_green_grape_pressed"]
+[connection signal="pressed" from="WhiteGrape" to="CauldronFill" method="_on_white_grape_pressed"]
+[connection signal="pressed" from="HealthFruit" to="ManaFruit" method="_on_health_fruit_pressed"]
+[connection signal="pressed" from="HealthFruit" to="StaminaFruit" method="_on_health_fruit_pressed"]
+[connection signal="pressed" from="ManaFruit" to="HealthFruit" method="_on_mana_fruit_pressed"]
+[connection signal="pressed" from="ManaFruit" to="StaminaFruit" method="_on_mana_fruit_pressed"]
+[connection signal="pressed" from="StaminaFruit" to="HealthFruit" method="_on_stamina_fruit_pressed"]
+[connection signal="pressed" from="StaminaFruit" to="ManaFruit" method="_on_stamina_fruit_pressed"]
+[connection signal="pressed" from="FullCauldron" to="CauldronFill" method="_on_full_cauldron_pressed"]

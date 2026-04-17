@@ -1,0 +1,7 @@
+label Perfect
+Customer (Happy): Whoa that's awesome! Thanks so much!
+[signal arg="customer_served"]
+[signal arg="perfect_serve"]
+leave Customer [animation="Slide To Right" length="1.5" wait="true"]
+[wait time="2.0"]
+jump Orders/Customer Enters
