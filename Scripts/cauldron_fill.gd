@@ -8,6 +8,7 @@ signal meh
 signal horrible
 signal wrong_potion
 
+var cooldown = 0
 var sour = 0
 var bitter = 0
 var sweet = 0
@@ -21,6 +22,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	cooldown = max(cooldown - _delta, 0.0)
+	if cooldown > 0:
+		return
+	
 	# Determines if cauldron is filled, and shows the "Fill Potion" button
 	fullcauldron = clamp(sour + sweet + bitter, 0, 100)
 	# 25 - 75 is the range of which the progresses texture can repersent due to margin at top/bottom
@@ -28,10 +33,13 @@ func _process(_delta: float) -> void:
 	value = lerp(25, 75, fullcauldron / 100.0)
 	if $"../PurpleGrape".button_pressed == true && fullcauldron < 100:
 		sweet += 1
+		cooldown = 0.075
 	elif $"../GreenGrape".button_pressed == true && fullcauldron < 100:
 		sour += 1
+		cooldown = 0.075
 	elif $"../WhiteGrape".button_pressed == true && fullcauldron < 100:
 		bitter += 1
+		cooldown = 0.075
 	else:
 		pass
 	
