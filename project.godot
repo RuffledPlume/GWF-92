@@ -125,6 +125,7 @@ audio/channel_defaults={
 }
 }
 text/input_action="click"
+layout/end_behaviour=0
 
 [display]
 

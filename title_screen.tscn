@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dkut4jekplvqh"]
+[gd_scene load_steps=25 format=3 uid="uid://dkut4jekplvqh"]
 
 [ext_resource type="Script" uid="uid://q8ws11cix6g3" path="res://title_screen.gd" id="1_05l2w"]
 [ext_resource type="Texture2D" uid="uid://bbtxdefagodf8" path="res://Assets/Shop_Background.png" id="2_ig5kc"]
@@ -11,6 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://coi1qfvkf738g" path="res://Assets/Buttons/Credit_Button_Pressed.png" id="10_skmiq"]
 [ext_resource type="Texture2D" uid="uid://bxmfktkyw4t75" path="res://Assets/Buttons/Credits_Button_Hover.png" id="11_lf08s"]
 [ext_resource type="Texture2D" uid="uid://b6buwjl535nyk" path="res://Assets/Buttons/Logo.png" id="11_rhgbh"]
+[ext_resource type="Script" uid="uid://w3uwixr0bcax" path="res://credit_button.gd" id="11_y8ura"]
+[ext_resource type="Texture2D" uid="uid://dw1npnh0sojir" path="res://Assets/Credits-1.png" id="13_aav61"]
+[ext_resource type="Texture2D" uid="uid://brc6gxghwdjcu" path="res://Assets/Credits-2.png" id="14_a64np"]
+[ext_resource type="Script" uid="uid://ckvd5pwfgb2w4" path="res://credits_2.gd" id="15_aav61"]
+[ext_resource type="Texture2D" uid="uid://bgmejqeeblltr" path="res://Assets/Buttons/Quit_Unpressed.png" id="15_g2tdu"]
+[ext_resource type="Texture2D" uid="uid://biwwoqms48g3l" path="res://Assets/Buttons/Quit_Pressed.png" id="16_7yan6"]
+[ext_resource type="Texture2D" uid="uid://diaxgr7valrpa" path="res://Assets/Buttons/Quit_Hover.png" id="17_4h4vs"]
+[ext_resource type="Script" uid="uid://w23jrgsmmy86" path="res://quit_button.gd" id="18_a64np"]
+[ext_resource type="Texture2D" uid="uid://c1bf5cun1r2wl" path="res://Assets/Buttons/Credit_PotionGuy_Button_Unpressed.png" id="18_fd0ao"]
+[ext_resource type="Texture2D" uid="uid://dnn1jcnakkg35" path="res://Assets/Buttons/Credit_PotionGuy_Button_Pressed.png" id="19_g3bb0"]
 
 [sub_resource type="Animation" id="Animation_rhgbh"]
 resource_name = "IntroAnim"
@@ -203,6 +213,7 @@ scale = Vector2(0.40766567, 0.40766567)
 texture_normal = ExtResource("9_rhgbh")
 texture_pressed = ExtResource("10_skmiq")
 texture_hover = ExtResource("11_lf08s")
+script = ExtResource("11_y8ura")
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(744, 274)
@@ -213,3 +224,45 @@ texture = ExtResource("11_rhgbh")
 libraries = {
 &"": SubResource("AnimationLibrary_lf08s")
 }
+
+[node name="Credit_Potion_Guy_Button" type="TextureButton" parent="."]
+visible = false
+z_index = 2
+offset_left = 214.99998
+offset_top = 299.0
+offset_right = 599.0
+offset_bottom = 830.0
+scale = Vector2(0.49437088, 0.49437088)
+toggle_mode = true
+texture_normal = ExtResource("18_fd0ao")
+texture_pressed = ExtResource("19_g3bb0")
+texture_hover = ExtResource("19_g3bb0")
+
+[node name="Quit_Button" type="TextureButton" parent="."]
+visible = false
+z_index = 2
+offset_left = 109.00001
+offset_top = 59.0
+offset_right = 1189.0
+offset_bottom = 1139.0
+scale = Vector2(0.04892827, 0.04892827)
+texture_normal = ExtResource("15_g2tdu")
+texture_pressed = ExtResource("16_7yan6")
+texture_hover = ExtResource("17_4h4vs")
+script = ExtResource("18_a64np")
+
+[node name="Credits2" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(577.25, 324.95297)
+scale = Vector2(0.6000001, 0.6000001)
+texture = ExtResource("14_a64np")
+script = ExtResource("15_aav61")
+
+[node name="Credits1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577.25, 324.95313)
+scale = Vector2(0.5997396, 0.5997396)
+texture = ExtResource("13_aav61")
+
+[connection signal="pressed" from="Credit_Potion_Guy_Button" to="Credits2" method="_on_credit_potion_guy_button_pressed"]

@@ -8,11 +8,11 @@ if {Random_Value} == 0.0:
 	jump Orders/
 elif {Random_Value} == 1.0:
 	Adventurer: This is perfection in a bottle, thank you kind shopkeep!
-	leave Adventurer
+	leave Adventurer [animation="Slide To Right"]
 	jump Orders/
 elif {Random_Character} == 2.0:
 	Adventurer: Never have I had a potion as beautiful as this, you will go down in history as a cohort to my adventures! Good day!
-	leave Adventurer
+	leave Adventurer [animation="Slide To Right"]
 	jump Orders/
 else:
 	jump Perfect_Order

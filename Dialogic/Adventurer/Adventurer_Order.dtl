@@ -52,4 +52,8 @@ elif {Random_Value} == 3.0:
 else:
 	jump Adventurer_Order
 [signal arg="potion_ordered"]
-[wait time="240.0"]
+[wait time="60.0" hide_text="false"]
+Adventurer (Mad): Destiny can wait for you no longer, I must go right now!
+[signal arg="customer_served"]
+leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+jump Orders/

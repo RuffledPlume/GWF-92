@@ -53,4 +53,8 @@ elif {Random_Value} == 2.0:
 else:
 	jump Assassin_Order
 [signal arg="potion_ordered"]
-[wait time="240.0"]
+[wait time="60.0" hide_text="false"]
+Assassin (Mad): My time is valuable, and you are wasting it.
+[signal arg="customer_served"]
+leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+jump Orders/
