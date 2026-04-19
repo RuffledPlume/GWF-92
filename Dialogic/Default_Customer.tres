@@ -9,7 +9,9 @@ script = ExtResource("2_tlmwn")
 scene = ExtResource("1_a15gr")
 overrides = {
 "global_bg_color": "Color(1, 0.94509804, 0.8235294, 1)",
-"global_font_color": "Color(0.42745098, 0.29411766, 0.15294118, 1)"
+"global_font": "\"res://Assets/MorrisRoman-Black.ttf\"",
+"global_font_color": "Color(0.42745098, 0.29411766, 0.15294118, 1)",
+"global_font_size": "25.0"
 }
 
 [resource]
