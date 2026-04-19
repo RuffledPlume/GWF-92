@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://hwh5v6244pya"]
+[gd_scene load_steps=58 format=3 uid="uid://hwh5v6244pya"]
 
 [ext_resource type="Script" uid="uid://vqv0w5eg1htp" path="res://Scripts/cauldron.gd" id="1_3y5ey"]
 [ext_resource type="Texture2D" uid="uid://hf7l8prbbk7w" path="res://Assets/Cauldron_Guides.png" id="2_fnqoo"]
@@ -33,7 +33,9 @@
 [ext_resource type="Texture2D" uid="uid://c705dkmqyue6d" path="res://Assets/Fruit/Stamina/StaminaFruit_Hover.png" id="29_hr6o3"]
 [ext_resource type="Script" uid="uid://co6yyef5e2u8n" path="res://Scripts/overlay_button.gd" id="30_ketrn"]
 [ext_resource type="Texture2D" uid="uid://d26yhm3s4xc0i" path="res://Assets/Fruit/Stamina/StaminaFruit_Disabled.png" id="30_tjc56"]
+[ext_resource type="FontFile" uid="uid://68qx8ngv3hxx" path="res://Assets/MorrisRoman-Black.ttf" id="31_aw2my"]
 [ext_resource type="Texture2D" uid="uid://1fu52jp2lc5y" path="res://Assets/Buttons/Star_Rating_Background.png" id="32_a7pna"]
+[ext_resource type="Script" uid="uid://dhgwg7fn3hdrv" path="res://Scripts/pulse.gd" id="32_mcqr7"]
 [ext_resource type="Texture2D" uid="uid://31u8byqqoqfa" path="res://Assets/Buttons/Star_Rating_Progress.png" id="33_3x73o"]
 [ext_resource type="Texture2D" uid="uid://bf2eetbikc037" path="res://Assets/Buttons/Guide_Invisible_Unpressed.png" id="36_far15"]
 [ext_resource type="Texture2D" uid="uid://b3ibfwq5462d0" path="res://Assets/Buttons/Guide_Visible_Pressed.png" id="37_1npwi"]
@@ -54,6 +56,14 @@
 [ext_resource type="AudioStream" uid="uid://bulspnkw23edt" path="res://Assets/Level_Music.wav" id="54_7yotp"]
 [ext_resource type="Texture2D" uid="uid://brhkex1yjgnmu" path="res://Assets/Buttons/Music_Toggle_On_Hover.png" id="54_mcqr7"]
 [ext_resource type="Script" uid="uid://bsavfynonltvf" path="res://Scripts/level_background.gd" id="55_aw2my"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mcqr7"]
+font = ExtResource("31_aw2my")
+font_size = 236
+font_color = Color(1, 1, 1, 0.5)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.27600002)
+shadow_offset = Vector2(5, 5)
 
 [node name="Cauldron" type="Node2D"]
 top_level = true
@@ -182,6 +192,25 @@ offset_right = 1857.0
 offset_bottom = 1419.0
 scale = Vector2(0.21802008, 0.21802008)
 script = ExtResource("11_x7ncy")
+
+[node name="Label" type="Label" parent="FullCauldron"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.5
+offset_top = -102.0
+offset_right = 240.5
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Serve"
+label_settings = SubResource("LabelSettings_mcqr7")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("32_mcqr7")
 
 [node name="OverlayButton" type="TextureButton" parent="."]
 z_index = 1
