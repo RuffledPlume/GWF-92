@@ -22,20 +22,20 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	# Determines if cauldron is filled, and shows the "Fill Potion" button
-	fullcauldron = sour + sweet + bitter
+	fullcauldron = clamp(sour + sweet + bitter, 0, 100)
+	# 25 - 75 is the range of which the progresses texture can repersent due to margin at top/bottom
+	# This remapps the value using fullcauldron
+	value = lerp(25, 75, fullcauldron / 100.0)
 	if $"../PurpleGrape".button_pressed == true && fullcauldron < 100:
-		value += 1
 		sweet += 1
 	elif $"../GreenGrape".button_pressed == true && fullcauldron < 100:
-		value += 1
 		sour += 1
 	elif $"../WhiteGrape".button_pressed == true && fullcauldron < 100:
-		value += 1
 		bitter += 1
 	else:
 		pass
 	
-	if value == 100:
+	if fullcauldron == 100:
 		$"../FullCauldron".visible = true
 
 	if $"../HealthFruit".button_pressed == true:
