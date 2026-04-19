@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjfckrdln4har"
-path="res://.godot/imported/button_rectangle_depth_flat.svg-66f2b8e4a6808e9bfde1f5de41b667c8.ctex"
+uid="uid://bc07a31qyrolb"
+path="res://.godot/imported/Mad.png-24d66a921b7f1ef43a7b480a164f0a6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons/button_rectangle_depth_flat.svg"
-dest_files=["res://.godot/imported/button_rectangle_depth_flat.svg-66f2b8e4a6808e9bfde1f5de41b667c8.ctex"]
+source_file="res://Assets/Character_Portraits/Adventurer/Mad.png"
+dest_files=["res://.godot/imported/Mad.png-24d66a921b7f1ef43a7b480a164f0a6f.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

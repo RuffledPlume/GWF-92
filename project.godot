@@ -125,6 +125,11 @@ audio/channel_defaults={
 }
 text/input_action="click"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
 [dotnet]
 
 project/assembly_name="TheVineyard"

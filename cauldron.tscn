@@ -1,7 +1,7 @@
 [gd_scene load_steps=55 format=3 uid="uid://hwh5v6244pya"]
 
 [ext_resource type="Script" uid="uid://vqv0w5eg1htp" path="res://Scripts/cauldron.gd" id="1_3y5ey"]
-[ext_resource type="Texture2D" uid="uid://nrowwnlspyk1" path="res://Assets/Cauldron_Guides.png" id="2_fnqoo"]
+[ext_resource type="Texture2D" uid="uid://hf7l8prbbk7w" path="res://Assets/Cauldron_Guides.png" id="2_fnqoo"]
 [ext_resource type="Texture2D" uid="uid://nueinjw1wbet" path="res://Assets/Cauldron_Background.png" id="2_roung"]
 [ext_resource type="Texture2D" uid="uid://bcklpxmsdikmj" path="res://Assets/Cauldron_Overlay.png" id="3_far15"]
 [ext_resource type="Script" uid="uid://31scwjojtiti" path="res://Scripts/cauldron_fill.gd" id="3_q3ljf"]
@@ -251,6 +251,7 @@ scale = Vector2(0.6270299, 0.6270299)
 texture = ExtResource("47_a7pna")
 
 [node name="Cauldron_Guide" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(896, 458.00003)
 scale = Vector2(0.2873596, 0.2873596)
 texture = ExtResource("2_fnqoo")

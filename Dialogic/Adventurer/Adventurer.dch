@@ -19,7 +19,7 @@
 &"portraits": {
 "Happy": {
 "export_overrides": {
-"image": "\"res://Assets/CustomerHappy.png\""
+"image": "\"res://Assets/Character_Portraits/Adventurer/Happy.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -28,7 +28,7 @@
 },
 "Mad": {
 "export_overrides": {
-"image": "\"res://Assets/CustomerMad.png\""
+"image": "\"res://Assets/Character_Portraits/Adventurer/Mad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -37,7 +37,7 @@
 },
 "Neutral": {
 "export_overrides": {
-"image": "\"res://Assets/CustomerNeutral.png\""
+"image": "\"res://Assets/Character_Portraits/Adventurer/Neutral.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -46,7 +46,7 @@
 },
 "Sad": {
 "export_overrides": {
-"image": "\"res://Assets/CustomerSad.png\""
+"image": "\"res://Assets/Character_Portraits/Adventurer/Sad.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

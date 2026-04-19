@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hf7l8prbbk7w"
-path="res://.godot/imported/Cauldron_Guides.png-51e2765d80c36cc0e75ba583636008a7.ctex"
+uid="uid://cmxl3l4mn1u07"
+path="res://.godot/imported/Happy.png-522eae51a5ede487b3da5fa02ab8bd7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cauldron_Guides.png"
-dest_files=["res://.godot/imported/Cauldron_Guides.png-51e2765d80c36cc0e75ba583636008a7.ctex"]
+source_file="res://Assets/Character_Portraits/Adventurer/Happy.png"
+dest_files=["res://.godot/imported/Happy.png-522eae51a5ede487b3da5fa02ab8bd7d.ctex"]
 
 [params]
 

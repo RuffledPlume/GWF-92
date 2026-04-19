@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hf7l8prbbk7w"
-path="res://.godot/imported/Cauldron_Guides.png-51e2765d80c36cc0e75ba583636008a7.ctex"
+uid="uid://cnw7y44qbme3l"
+path="res://.godot/imported/Sad.png-b00e7435ea953dc8d9b52b6bfc94190a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cauldron_Guides.png"
-dest_files=["res://.godot/imported/Cauldron_Guides.png-51e2765d80c36cc0e75ba583636008a7.ctex"]
+source_file="res://Assets/Character_Portraits/Adventurer/Sad.png"
+dest_files=["res://.godot/imported/Sad.png-b00e7435ea953dc8d9b52b6bfc94190a.ctex"]
 
 [params]
 
