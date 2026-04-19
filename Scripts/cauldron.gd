@@ -1,11 +1,5 @@
 extends Node2D
 
-@export
-var AnimPlayer : AnimationPlayer
-
-func _enter_tree() -> void:
-	AnimPlayer.play("IntroAnim")
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Dialogic.start("res://Dialogic/Tutorial.dtl")
