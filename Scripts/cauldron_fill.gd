@@ -33,13 +33,13 @@ func _process(_delta: float) -> void:
 	value = lerp(25, 75, fullcauldron / 100.0)
 	if $"../PurpleGrape".button_pressed == true && fullcauldron < 100:
 		sweet += 1
-		cooldown = 0.075
+		cooldown = 0.025
 	elif $"../GreenGrape".button_pressed == true && fullcauldron < 100:
 		sour += 1
-		cooldown = 0.075
+		cooldown = 0.025
 	elif $"../WhiteGrape".button_pressed == true && fullcauldron < 100:
 		bitter += 1
-		cooldown = 0.075
+		cooldown = 0.025
 	else:
 		pass
 	
