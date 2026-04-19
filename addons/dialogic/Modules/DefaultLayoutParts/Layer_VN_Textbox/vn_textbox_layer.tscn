@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bquja8jyk8kbr"]
+[gd_scene load_steps=16 format=3 uid="uid://bquja8jyk8kbr"]
 
 [ext_resource type="Script" uid="uid://bl43m5qw8pso3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.gd" id="1_bpydr"]
 [ext_resource type="Script" uid="uid://bfc03rn8slceu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/animations.gd" id="2_xy7a2"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://bklme8oymw6h7" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/autoadvance_indicator.gd" id="6_07xym"]
 [ext_resource type="Texture2D" uid="uid://b0rpqfg4fhebk" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/next.svg" id="6_uch03"]
 [ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="7_bi7sh"]
-[ext_resource type="StyleBox" uid="uid://m7gyepkysu83" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres" id="9_yg8ig"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -213,7 +212,19 @@ corner_radius_bottom_left = 5
 shadow_size = 1
 shadow_offset = Vector2(3, 3)
 
-[sub_resource type="FontVariation" id="FontVariation_v8y64"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uihyy"]
+bg_color = Color(1, 0.94509804, 0.8235294, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7058824, 0.48235294, 0.25490198, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+shadow_size = 1
+shadow_offset = Vector2(3, 3)
 
 [node name="VN_TextboxLayer" type="Control"]
 layout_mode = 3
@@ -224,12 +235,19 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_bpydr")
-text_custom_color = Color(0.42745098, 0.29411766, 0.15294118, 1)
+text_use_global_color = false
+text_custom_color = Color(0.43529412, 0.3019608, 0.16078432, 1)
 box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_default_panel.tres"
 box_color_use_global = false
+box_color_custom = Color(1, 0.94509804, 0.8235294, 1)
 box_size = Vector2(550, 150)
+name_label_use_global_color = false
+name_label_use_character_color = false
+name_label_custom_color = Color(0.4509804, 0.32156864, 0.18039216, 1)
+name_label_use_global_font_size = false
 name_label_box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_name_label_panel.tres"
-name_label_box_modulate = Color(0, 0, 0, 1)
+name_label_box_use_global_color = false
+name_label_box_modulate = Color(0.4745098, 0.34901962, 0.21176471, 1)
 
 [node name="Animations" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
@@ -333,28 +351,25 @@ show_percentage = false
 script = ExtResource("6_07xym")
 
 [node name="NameLabelHolder" type="Control" parent="Anchor/AnimationParent/Sizer/DialogTextPanel"]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 
 [node name="NameLabelPanel" type="PanelContainer" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/NameLabelHolder"]
 unique_name_in_owner = true
-self_modulate = Color(0.00784314, 0.00784314, 0.00784314, 0.843137)
 layout_mode = 1
 offset_top = -50.0
 offset_right = 9.0
 offset_bottom = -25.0
 mouse_filter = 2
-theme_override_styles/panel = ExtResource("9_yg8ig")
+theme_override_styles/panel = SubResource("StyleBoxFlat_uihyy")
 metadata/_edit_layout_mode = 1
 metadata/_edit_use_custom_anchors = true
-metadata/_edit_group_ = true
 
-[node name="DialogicNode_NameLabel" type="Label" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/NameLabelHolder/NameLabelPanel" node_paths=PackedStringArray("name_label_root")]
-unique_name_in_owner = true
+[node name="DialogicNode_NameLabel" type="Label" parent="Anchor/AnimationParent/Sizer/DialogTextPanel/NameLabelHolder/NameLabelPanel"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("FontVariation_v8y64")
-theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.45490196, 0.3254902, 0.18431373, 1)
+theme_override_font_sizes/font_size = 16
 text = "S"
 script = ExtResource("7_bi7sh")
-name_label_root = NodePath("..")
+metadata/_custom_type_script = "uid://bak74s0kcr0ao"

@@ -3,3 +3,9 @@ res://Dialogic/Default_Customer.tres
 res://Scripts/cauldron.gd
 res://cauldron.tscn
 res://Dialogic/Nobleman/Nobleman.dch
+res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn
+res://Dialogic/CustomDefaultCustomer/custom_default_customer.tscn
+res://title_screen.gd
+res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.gd
+res://Scripts/level_background.gd
+res://play_button.gd

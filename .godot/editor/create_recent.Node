@@ -1,8 +1,9 @@
+Sprite2D
+TextureButton
+DialogicNode_NameLabel
+AudioStreamPlayer
 AnimatedSprite2D
 AnimationPlayer
-AudioStreamPlayer
-TextureButton
-Sprite2D
 DialogicNode_BackgroundHolder
 CanvasLayer
 TextureProgressBar
@@ -11,5 +12,3 @@ Control
 DialogicNode_PortraitContainer
 DialogicPortrait
 DialogicBackground
-DialogicGameHandler
-Timer

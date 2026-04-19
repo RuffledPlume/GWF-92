@@ -173,7 +173,7 @@ func _apply_box_animations_settings() -> void:
 
 ## Applies all name label settings to the scene.
 func _apply_name_label_settings() -> void:
-	var name_label: DialogicNode_NameLabel = %DialogicNode_NameLabel
+	var name_label: DialogicNode_NameLabel = $Anchor/AnimationParent/Sizer/DialogTextPanel/NameLabelHolder/NameLabelPanel/DialogicNode_NameLabel
 
 	if name_label_use_global_font_size:
 		name_label.add_theme_font_size_override(&"font_size", get_global_setting(&'font_size', name_label_custom_font_size) as int)
