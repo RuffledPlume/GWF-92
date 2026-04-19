@@ -27,6 +27,6 @@ func _on_screen_hidden() -> void:
 		on_screen_hidden.call()
 	on_screen_hidden_valid = false
 
-func _transition_finished() -> void:
+func _transition_finished(anim_name: StringName) -> void:
 	$CanvasLayer.visible = false
 	
