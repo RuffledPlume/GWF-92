@@ -1,0 +1,15 @@
+set {Random_Character} = range(0,4).pick_random()
+if {Random_Character} == 0.0:
+	jump Adventurer_Order/
+	[end_timeline]
+elif {Random_Character} == 1.0:
+	jump Assassin_Order/
+	[end_timeline]
+elif {Random_Character} == 2.0:
+	jump Nobleman_Order/
+	[end_timeline]
+elif {Random_Character} == 3.0:
+	jump Guard_Order/
+	[end_timeline]
+else:
+	jump

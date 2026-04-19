@@ -1,0 +1,14 @@
+update Nobleman (Happy)
+[signal arg="good_serve"]
+set {Random_Value} = range(0,2).pick_random()
+label Good
+if {Random_Value} == 0.0:
+	Nobleman: Good job. I will return.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Nobleman: This is very good. Thank you.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Good

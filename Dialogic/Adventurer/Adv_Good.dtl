@@ -1,0 +1,14 @@
+update Adventurer (Happy)
+[signal arg="good_serve"]
+label Pretty Good
+set {Random_Value} = range(0,2).pick_random()
+if {Random_Value} == 0.0:
+	Adventurer: Excellent! This will do me well, thank you kind shopkeeper!
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Adventurer: Very good job! This is just what I need, thank you!
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Pretty Good

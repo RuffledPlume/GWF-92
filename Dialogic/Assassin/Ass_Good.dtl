@@ -1,0 +1,14 @@
+update Assassin (Happy)
+[signal arg="good_serve"]
+label Good
+set {Random_Value} = range(0,2).pick_random()
+if {Random_Value} == 0.0:
+	Assassin: This is a well crafted potion. Goodbye.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Assassin: This will do me quite well. Goodbye.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Good

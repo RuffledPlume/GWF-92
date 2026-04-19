@@ -1,0 +1,14 @@
+update Assassin (Mad)
+[signal arg="horrible_serve"]
+label Horrible
+set {Random_Value} = range(0,2).pick_random()
+if {Random_Value} == 0.0:
+	Assassin: This is unacceptable. I will remember this.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Assassin: This potion is unsatisfactory. You have made an enemy today.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Horrible

@@ -1,0 +1,14 @@
+update Nobleman (Neutral)
+[signal arg="meh_serve"]
+set {Random_Value} = range(0,2).pick_random()
+label Meh
+if {Random_Value} == 0.0:
+	Nobleman: I suppose I can accept this.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Nobleman: It’s not exactly right, but I will take this.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Meh

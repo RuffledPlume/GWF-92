@@ -1,0 +1,18 @@
+update Guard (Happy)
+[signal arg="good_serve"]
+label Good
+set {Random_Value} = range(0,3).pick_random()
+if {Random_Value} == 0.0:
+	Guard: Great potion. Bye.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Guard: Great job. Bye.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 2.0:
+	Guard: Good good.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Good

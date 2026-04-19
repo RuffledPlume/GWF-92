@@ -1,0 +1,18 @@
+update Adventurer (Happy)
+[signal arg="perfect_serve"]
+label Perfect_Order
+set {Random_Value} = range(0,3).pick_random()
+if {Random_Value} == 0.0:
+	Adventurer: Ah, this is exemplary! Perfect job, I shall return when I require more potions. Until then, I bid you farewell!
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Adventurer: This is perfection in a bottle, thank you kind shopkeep!
+	leave Adventurer
+	jump Orders/
+elif {Random_Character} == 2.0:
+	Adventurer: Never have I had a potion as beautiful as this, you will go down in history as a cohort to my adventures! Good day!
+	leave Adventurer
+	jump Orders/
+else:
+	jump Perfect_Order

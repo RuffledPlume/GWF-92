@@ -1,0 +1,13 @@
+update Assassin (Sad)
+label Wrong
+set {Random_Value} = range(0,2).pick_random()
+if {Random_Value} == 0.0:
+	Assassin: This is not what I requested. Get it right next time.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Assassin: Is this for someone else? I don’t appreciate sloppy work.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Wrong

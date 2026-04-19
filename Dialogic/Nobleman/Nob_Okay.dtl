@@ -1,0 +1,14 @@
+update Nobleman (Neutral)
+[signal arg="okay_serve"]
+set {Random_Value} = range(0,2).pick_random()
+label Okay
+if {Random_Value} == 0.0:
+	Nobleman: This will do just fine. I will return.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Nobleman: This is adequate. May you have a good day.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Okay

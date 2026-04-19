@@ -1,0 +1,15 @@
+AnimatedSprite2D
+AnimationPlayer
+AudioStreamPlayer
+TextureButton
+Sprite2D
+DialogicNode_BackgroundHolder
+CanvasLayer
+TextureProgressBar
+ProgressBar
+Control
+DialogicNode_PortraitContainer
+DialogicPortrait
+DialogicBackground
+DialogicGameHandler
+Timer

@@ -1,0 +1,14 @@
+update Assassin (Neutral)
+[signal arg="meh_serve"]
+label Meh
+set {Random_Value} = range(0,2).pick_random()
+if {Random_Value} == 0.0:
+	Assassin: This is acceptable, but I expect better next time.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Assassin: I can work with this, but I’ve had better potions.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Meh

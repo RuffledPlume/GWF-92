@@ -1,0 +1,14 @@
+update Nobleman (Happy)
+[signal arg="perfect_serve"]
+label Perfect_Order
+set {Random_Value} = range(0,2).pick_random()
+if {Random_Value} == 0.0:
+	Nobleman: Great, this will serve me well. Expect more business from the kingdom in the future.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Nobleman: You have done an outstanding job with this potion. You have made a powerful friend today.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Perfect_Order

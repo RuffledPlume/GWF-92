@@ -1,0 +1,14 @@
+update Nobleman (Mad)
+[signal arg="horrible_serve"]
+set {Random_Value} = range(0,2).pick_random()
+label Horrible
+if {Random_Value} == 0.0:
+	Nobleman: This is an act of terrorism against the kingdom.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Nobleman: Some of us actually care about our work.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Horrible

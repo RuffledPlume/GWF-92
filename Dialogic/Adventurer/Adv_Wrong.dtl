@@ -1,0 +1,17 @@
+update Adventurer (Sad)
+label Wrong
+set {Random_Value} = range(0,3).pick_random()
+if {Random_Value} == 0.0:
+	Adventurer: This is not what I asked for, not at all!
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Adventurer: This potion won’t do what I need it to do! Why did you give me the wrong potion?
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 2.0:
+	Adventurer: Is this meant for someone else? Why did you give me this?
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Wrong

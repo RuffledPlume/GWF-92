@@ -1,0 +1,14 @@
+update Assassin (Neutral)
+[signal arg="okay_serve"]
+label Okay
+set {Random_Value} = range(0,2).pick_random()
+if {Random_Value} == 0.0:
+	Assassin: This is good enough.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Assassin: This will work.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Okay

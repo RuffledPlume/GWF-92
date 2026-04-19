@@ -1,0 +1,55 @@
+set {Current_Customer} = "Adventurer"
+set {Name} = ["Matheus the Twelfth", "Gregory the Brave", "Basil the Eighth", "Benjamin the Bold"].pick_random()
+set {Magic} = ["Health", "Stamina", "Mana"].pick_random()
+set {Sweet} = range(0,101).pick_random()
+set {Sour} = {range(0, (100 - {Sweet})).pick_random()}
+set {Bitter} = 100 - ({Sweet} + {Sour})
+if {Sweet} == 100:
+	set {SweetConditional} = "completely"
+elif {Sweet} < 100 && {Sweet} >= 75:
+	set {SweetConditional} = "mostly"
+elif {Sweet} < 75 && {Sweet} >= 50:
+	set {SweetConditional} = "more than half"
+elif {Sweet} < 50 && {Sweet} >= 25:
+	set {SweetConditional} = "more than a quarter"
+elif {Sweet} < 25 && {Sweet} > 0:
+	set {SweetConditional} = "less than a quarter"
+elif {Sweet} == 0:
+	set {SweetConditional} = "not at all"
+if {Bitter} == 100:
+	set {BitterConditional} = "completely"
+elif {Bitter} < 100 && {Bitter} >= 75:
+	set {BitterConditional} = "mostly"
+elif {Bitter} < 75 && {Bitter} >= 50:
+	set {BitterConditional} = "more than half"
+elif {Bitter} < 50 && {Bitter} >= 25:
+	set {BitterConditional} = "more than a quarter"
+elif {Bitter} < 25 && {Bitter} > 0:
+	set {BitterConditional} = "less than a quarter"
+elif {Bitter} == 0:
+	set {BitterConditional} = "not at all"
+if {Sour} == 100:
+	set {SourConditional} = "completely"
+elif {Sour} < 100 && {Sour} >= 75:
+	set {SourConditional} = "mostly"
+elif {Sour} < 75 && {Sour} >= 50:
+	set {SourConditional} = "more than half"
+elif {Sour} < 50 && {Sour} >= 25:
+	set {SourConditional} = "more than a quarter"
+elif {Sour} < 25 && {Sour} > 0:
+	set {SourConditional} = "less than a quarter"
+elif {Sour} == 0:
+	set {SourConditional} = "not at all"
+join Adventurer (Neutral) center [animation="Slide From Left" length="1.0" wait="true"]
+label Adventurer_Order
+set {Random_Value} = range(1,4).pick_random()
+if {Random_Value} == 1.0:
+	Adventurer (Happy): Salutations, shopkeep! It is I, {Name}, and I am in dire, dire need of a {Magic} potion that is {SweetConditional} sweet, {SourConditional} sour, and {BitterConditional} bitter, before I embark on my next adventure. Could you please make one for me?
+elif {Random_Value} == 2.0:
+	Adventurer: Greetings! My name is {Name} and I require a {Magic} potion that is {SweetConditional} sweet, {SourConditional} sour, and {BitterConditional} bitter, if you’d be so kind!
+elif {Random_Value} == 3.0:
+	Adventurer: Good day! I am {Name}, and I’m searching for a {Magic} potion that is {SweetConditional} sweet, {SourConditional} sour, and {BitterConditional} bitter, are you able to aid me in my quest?
+else:
+	jump Adventurer_Order
+[signal arg="potion_ordered"]
+[wait time="240.0"]

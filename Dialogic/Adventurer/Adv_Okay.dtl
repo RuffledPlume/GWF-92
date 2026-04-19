@@ -1,0 +1,14 @@
+update Adventurer (Neutral)
+[signal arg="okay_serve"]
+label Okay
+set {Random_Value} = range(0,2).pick_random()
+if {Random_Value} == 0.0:
+	Adventurer: Not great, but it will do! Farewell.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+elif {Random_Value} == 1.0:
+	Adventurer: There’s something off about this, but it will work. Goodbye.
+	leave --All-- [animation="Slide To Right" length="1.0" wait="true"]
+	jump Orders/
+else:
+	jump Okay

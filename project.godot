@@ -1,0 +1,156 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="TheVineyard"
+run/main_scene="uid://hwh5v6244pya"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+
+[dialogic]
+
+directories/dch_directory={
+"Adventurer": "res://Dialogic/Adventurer/Adventurer.dch",
+"Assassin": "res://Dialogic/Assassin/Assassin.dch",
+"Customer": "res://Dialogic/Customer.dch",
+"Guard": "res://Dialogic/Guard/Guard.dch",
+"Nobleman": "res://Dialogic/Nobleman/Nobleman.dch",
+"project/Customer": "res://project/Customer.dch"
+}
+directories/dtl_directory={
+"Adv_Good": "res://Dialogic/Adventurer/Adv_Good.dtl",
+"Adv_Horrible": "res://Dialogic/Adventurer/Adv_Horrible.dtl",
+"Adv_Meh": "res://Dialogic/Adventurer/Adv_Meh.dtl",
+"Adv_Okay": "res://Dialogic/Adventurer/Adv_Okay.dtl",
+"Adv_Perfect": "res://Dialogic/Adventurer/Adv_Perfect.dtl",
+"Adv_Wrong": "res://Dialogic/Adventurer/Adv_Wrong.dtl",
+"Adventurer_Order": "res://Dialogic/Adventurer/Adventurer_Order.dtl",
+"Ass_Good": "res://Dialogic/Assassin/Ass_Good.dtl",
+"Ass_Horrible": "res://Dialogic/Assassin/Ass_Horrible.dtl",
+"Ass_Meh": "res://Dialogic/Assassin/Ass_Meh.dtl",
+"Ass_Okay": "res://Dialogic/Assassin/Ass_Okay.dtl",
+"Ass_Perfect": "res://Dialogic/Assassin/Ass_Perfect.dtl",
+"Ass_Wrong": "res://Dialogic/Assassin/Ass_Wrong.dtl",
+"Assassin_Order": "res://Dialogic/Assassin/Assassin_Order.dtl",
+"Gua_Good": "res://Dialogic/Guard/Gua_Good.dtl",
+"Gua_Horrible": "res://Dialogic/Guard/Gua_Horrible.dtl",
+"Gua_Meh": "res://Dialogic/Guard/Gua_Meh.dtl",
+"Gua_Okay": "res://Dialogic/Guard/Gua_Okay.dtl",
+"Gua_Perfect": "res://Dialogic/Guard/Gua_Perfect.dtl",
+"Gua_Wrong": "res://Dialogic/Guard/Gua_Wrong.dtl",
+"Guard_Order": "res://Dialogic/Guard/Guard_Order.dtl",
+"Horrible": "res://project/Horrible.dtl",
+"Meh": "res://project/Meh.dtl",
+"Nob_Good": "res://Dialogic/Nobleman/Nob_Good.dtl",
+"Nob_Horrible": "res://Dialogic/Nobleman/Nob_Horrible.dtl",
+"Nob_Meh": "res://Dialogic/Nobleman/Nob_Meh.dtl",
+"Nob_Okay": "res://Dialogic/Nobleman/Nob_Okay.dtl",
+"Nob_Perfect": "res://Dialogic/Nobleman/Nob_Perfect.dtl",
+"Nob_Wrong": "res://Dialogic/Nobleman/Nob_Wrong.dtl",
+"Nobleman_Order": "res://Dialogic/Nobleman/Nobleman_Order.dtl",
+"Okay": "res://project/Okay.dtl",
+"Orders": "res://Dialogic/Orders.dtl",
+"Pretty Good": "res://project/Pretty Good.dtl",
+"Tutorial": "res://Dialogic/Tutorial.dtl",
+"Wrong_Potion": "res://project/Wrong_Potion.dtl",
+"perfect": "res://project/perfect.dtl",
+"project/Orders": "res://project/Orders.dtl"
+}
+layout/style_directory={
+"": "res://Dialogic/Default_Customer.tres",
+"Default_Customer": "res://Dialogic/Default_Customer.tres"
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://Dialogic/Default_Customer.tres"]
+layout/default_style="res://Dialogic/Default_Customer.tres"
+variables={
+"Bitter": "",
+"BitterConditional": "",
+"Current_Customer": "",
+"Flavor": "",
+"Magic": "",
+"Name": "",
+"Quality": "",
+"Random_Character": "",
+"Random_Value": "",
+"Sour": "",
+"SourConditional": "",
+"Sweet": "",
+"SweetConditional": ""
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+
+[dotnet]
+
+project/assembly_name="TheVineyard"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[input]
+
+click={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
