@@ -85,3 +85,10 @@ func _on_cauldron_fill_wrong_potion() -> void:
 		Dialogic.start("res://Dialogic/Nobleman/Nob_Wrong.dtl")
 	else:
 		pass
+
+
+func _on_quit_button_pressed() -> void:
+	Dialogic.clear()
+	get_tree().change_scene_to_file("res://title_screen.tscn")
+	
+	

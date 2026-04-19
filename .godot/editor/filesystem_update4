@@ -1,2 +1,5 @@
 res://title_screen.tscn
 res://Dialogic/Default_Customer.tres
+res://Scripts/cauldron.gd
+res://cauldron.tscn
+res://Dialogic/Nobleman/Nobleman.dch

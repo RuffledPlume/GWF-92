@@ -24,10 +24,10 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Adventurer": "res://Dialogic/Adventurer/Adventurer.dch",
 "Assassin": "res://Dialogic/Assassin/Assassin.dch",
+"Assets/project/Customer": "res://Assets/project/Customer.dch",
 "Customer": "res://Dialogic/Customer.dch",
 "Guard": "res://Dialogic/Guard/Guard.dch",
-"Nobleman": "res://Dialogic/Nobleman/Nobleman.dch",
-"project/Customer": "res://project/Customer.dch"
+"Nobleman": "res://Dialogic/Nobleman/Nobleman.dch"
 }
 directories/dtl_directory={
 "Adv_Good": "res://Dialogic/Adventurer/Adv_Good.dtl",
@@ -44,6 +44,7 @@ directories/dtl_directory={
 "Ass_Perfect": "res://Dialogic/Assassin/Ass_Perfect.dtl",
 "Ass_Wrong": "res://Dialogic/Assassin/Ass_Wrong.dtl",
 "Assassin_Order": "res://Dialogic/Assassin/Assassin_Order.dtl",
+"Assets/project/Orders": "res://Assets/project/Orders.dtl",
 "Gua_Good": "res://Dialogic/Guard/Gua_Good.dtl",
 "Gua_Horrible": "res://Dialogic/Guard/Gua_Horrible.dtl",
 "Gua_Meh": "res://Dialogic/Guard/Gua_Meh.dtl",
@@ -51,8 +52,6 @@ directories/dtl_directory={
 "Gua_Perfect": "res://Dialogic/Guard/Gua_Perfect.dtl",
 "Gua_Wrong": "res://Dialogic/Guard/Gua_Wrong.dtl",
 "Guard_Order": "res://Dialogic/Guard/Guard_Order.dtl",
-"Horrible": "res://project/Horrible.dtl",
-"Meh": "res://project/Meh.dtl",
 "Nob_Good": "res://Dialogic/Nobleman/Nob_Good.dtl",
 "Nob_Horrible": "res://Dialogic/Nobleman/Nob_Horrible.dtl",
 "Nob_Meh": "res://Dialogic/Nobleman/Nob_Meh.dtl",
@@ -60,13 +59,14 @@ directories/dtl_directory={
 "Nob_Perfect": "res://Dialogic/Nobleman/Nob_Perfect.dtl",
 "Nob_Wrong": "res://Dialogic/Nobleman/Nob_Wrong.dtl",
 "Nobleman_Order": "res://Dialogic/Nobleman/Nobleman_Order.dtl",
-"Okay": "res://project/Okay.dtl",
 "Orders": "res://Dialogic/Orders.dtl",
-"Pretty Good": "res://project/Pretty Good.dtl",
 "Tutorial": "res://Dialogic/Tutorial.dtl",
-"Wrong_Potion": "res://project/Wrong_Potion.dtl",
-"perfect": "res://project/perfect.dtl",
-"project/Orders": "res://project/Orders.dtl"
+"project/Horrible": "res://Assets/project/Horrible.dtl",
+"project/Meh": "res://Assets/project/Meh.dtl",
+"project/Okay": "res://Assets/project/Okay.dtl",
+"project/Pretty Good": "res://Assets/project/Pretty Good.dtl",
+"project/Wrong_Potion": "res://Assets/project/Wrong_Potion.dtl",
+"project/perfect": "res://Assets/project/perfect.dtl"
 }
 layout/style_directory={
 "": "res://Dialogic/Default_Customer.tres",
@@ -123,6 +123,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+text/input_action="click"
 
 [dotnet]
 

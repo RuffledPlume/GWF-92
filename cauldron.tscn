@@ -302,4 +302,5 @@ script = ExtResource("55_aw2my")
 [connection signal="pressed" from="StaminaFruit" to="ManaFruit" method="_on_stamina_fruit_pressed"]
 [connection signal="pressed" from="FullCauldron" to="CauldronFill" method="_on_full_cauldron_pressed"]
 [connection signal="pressed" from="EmptyButton" to="CauldronFill" method="_on_empty_button_pressed"]
+[connection signal="pressed" from="Quit_Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Mute_Button" to="Level_Background" method="_on_mute_button_pressed"]
