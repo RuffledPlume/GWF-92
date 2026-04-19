@@ -194,6 +194,7 @@ scale = Vector2(0.21802008, 0.21802008)
 script = ExtResource("11_x7ncy")
 
 [node name="Label" type="Label" parent="FullCauldron"]
+z_index = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
