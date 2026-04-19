@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dkut4jekplvqh"]
+[gd_scene load_steps=15 format=3 uid="uid://dkut4jekplvqh"]
 
 [ext_resource type="Script" uid="uid://q8ws11cix6g3" path="res://title_screen.gd" id="1_05l2w"]
 [ext_resource type="Texture2D" uid="uid://bbtxdefagodf8" path="res://Assets/Shop_Background.png" id="2_ig5kc"]
@@ -12,25 +12,179 @@
 [ext_resource type="Texture2D" uid="uid://bxmfktkyw4t75" path="res://Assets/Buttons/Credits_Button_Hover.png" id="11_lf08s"]
 [ext_resource type="Texture2D" uid="uid://b6buwjl535nyk" path="res://Assets/Buttons/Logo.png" id="11_rhgbh"]
 
+[sub_resource type="Animation" id="Animation_rhgbh"]
+resource_name = "IntroAnim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9666662),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1175, 274), Vector2(744, 274)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayButton:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-108.36, 369), Vector2(109, 369)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CreditButton:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-108.36, 497), Vector2(109.00001, 497)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CreditButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_skmiq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(744, 274)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayButton:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(109, 369)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CreditButton:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(109.00001, 497)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CreditButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lf08s"]
+_data = {
+&"IntroAnim": SubResource("Animation_rhgbh"),
+&"RESET": SubResource("Animation_skmiq")
+}
+
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_05l2w")
 metadata/_edit_vertical_guides_ = [109.0, 0.0, 1152.0, 1043.0]
 metadata/_edit_horizontal_guides_ = [477.0, 497.0]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1096, 611)
-scale = Vector2(1.1677947, 1.1677947)
+position = Vector2(1147.5001, 630)
+scale = Vector2(1.3869792, 1.3759257)
 texture = ExtResource("2_ig5kc")
 
 [node name="Main_Theme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_05l2w")
 volume_db = -35.0
 
-[node name="PlayButton" type="TextureButton" parent="."]
-offset_left = 109.00001
-offset_top = 369.00003
+[node name="PlayButton" type="TextureButton" parent="." node_paths=PackedStringArray("AnimPlayer")]
+offset_left = 109.0
+offset_top = 369.0
 offset_right = 909.0
 offset_bottom = 636.0
 scale = Vector2(0.4067554, 0.4067554)
@@ -38,6 +192,7 @@ texture_normal = ExtResource("5_013yr")
 texture_pressed = ExtResource("6_8vmu4")
 texture_hover = ExtResource("7_xfn3p")
 script = ExtResource("8_rhgbh")
+AnimPlayer = NodePath("../AnimationPlayer")
 
 [node name="CreditButton" type="TextureButton" parent="."]
 offset_left = 109.00001
@@ -53,3 +208,8 @@ texture_hover = ExtResource("11_lf08s")
 position = Vector2(744, 274)
 scale = Vector2(0.5975715, 0.5975715)
 texture = ExtResource("11_rhgbh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lf08s")
+}

@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2fcdym2pi83r"]
+
+[ext_resource type="Script" uid="uid://vgtu6nbeqw4l" path="res://Scripts/transition_manager.gd" id="1_2gi1b"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2gi1b"]
+
+[sub_resource type="Animation" id="Animation_pj2mc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeTex:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeTex:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2gi1b"]
+resource_name = "TransitionAnim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeTex:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.972619, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FadeTex:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.38983464, 0.41803023, 0.96666664),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_on_screen_hidden"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pj2mc"]
+_data = {
+&"RESET": SubResource("Animation_pj2mc"),
+&"TransitionAnim": SubResource("Animation_2gi1b")
+}
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("AnimPlayer")]
+script = ExtResource("1_2gi1b")
+AnimPlayer = NodePath("CanvasLayer/AnimationPlayer")
+metadata/_custom_type_script = "uid://vgtu6nbeqw4l"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FadeTex" type="TextureRect" parent="CanvasLayer"]
+visible = false
+modulate = Color(0, 0, 0, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -0.5
+offset_right = -0.5
+offset_bottom = -0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_2gi1b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_pj2mc")
+}

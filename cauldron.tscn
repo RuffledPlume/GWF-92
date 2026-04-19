@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://hwh5v6244pya"]
+[gd_scene load_steps=58 format=3 uid="uid://hwh5v6244pya"]
 
 [ext_resource type="Script" uid="uid://vqv0w5eg1htp" path="res://Scripts/cauldron.gd" id="1_3y5ey"]
 [ext_resource type="Texture2D" uid="uid://hf7l8prbbk7w" path="res://Assets/Cauldron_Guides.png" id="2_fnqoo"]
@@ -55,9 +55,23 @@
 [ext_resource type="Texture2D" uid="uid://brhkex1yjgnmu" path="res://Assets/Buttons/Music_Toggle_On_Hover.png" id="54_mcqr7"]
 [ext_resource type="Script" uid="uid://bsavfynonltvf" path="res://Scripts/level_background.gd" id="55_aw2my"]
 
-[node name="Cauldron" type="Node2D"]
+[sub_resource type="Animation" id="Animation_7yotp"]
+resource_name = "IntroAnim"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_aw2my"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mcqr7"]
+_data = {
+&"IntroAnim": SubResource("Animation_7yotp"),
+&"RESET": SubResource("Animation_aw2my")
+}
+
+[node name="Cauldron" type="Node2D" node_paths=PackedStringArray("AnimPlayer")]
 top_level = true
 script = ExtResource("1_3y5ey")
+AnimPlayer = NodePath("AnimationPlayer")
 metadata/_edit_horizontal_guides_ = [11.0, 259.0, 140.0, 129.0, 628.0, 53.0, 20.0]
 metadata/_edit_vertical_guides_ = [648.0, 1138.0, 808.0, 980.0, 814.0, 974.0, 668.0, 1118.0, 20.0, 314.0]
 
@@ -285,6 +299,11 @@ stream = ExtResource("54_7yotp")
 volume_db = -25.0
 autoplay = true
 script = ExtResource("55_aw2my")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mcqr7")
+}
 
 [connection signal="empty_cauldron" from="CauldronFill" to="HealthFruit" method="_on_cauldron_fill_empty_cauldron"]
 [connection signal="empty_cauldron" from="CauldronFill" to="ManaFruit" method="_on_cauldron_fill_empty_cauldron"]

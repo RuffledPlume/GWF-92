@@ -1,5 +1,10 @@
 extends Node2D
 
+@export
+var AnimPlayer : AnimationPlayer
+
+func _enter_tree() -> void:
+	AnimPlayer.play("IntroAnim")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -86,9 +91,11 @@ func _on_cauldron_fill_wrong_potion() -> void:
 	else:
 		pass
 
-
-func _on_quit_button_pressed() -> void:
+func _load_main_menu() -> void:
 	Dialogic.clear()
 	get_tree().change_scene_to_file("res://title_screen.tscn")
+
+func _on_quit_button_pressed() -> void:
+	TransitionManagerInstance.play_transition_with_event(_load_main_menu)
 	
 	
